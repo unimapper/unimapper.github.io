@@ -1,0 +1,10 @@
+---
+layout: blog
+title: Blog | News
+permalink: /blog/
+author: all
+---
+
+{% for post in site.posts %}
+  {% include blog_post.html %}
+{% endfor %}

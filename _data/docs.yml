@@ -1,0 +1,20 @@
+- title: Get started
+  docs:
+  - get-started/install
+  - get-started/describe-your-data
+  - get-started/store-them
+  - get-started/work-with-it
+
+- title: Reference
+  docs:
+  - reference/naming-conventions
+  - reference/entity
+  - reference/collection
+  - reference/repository
+  - reference/query
+  - reference/mapper
+
+- title: Extensions
+  docs:
+  - extensions/browse
+  - extensions/get-involved

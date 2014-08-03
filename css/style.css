@@ -1,0 +1,131 @@
+html, body {
+    background-color: #333333;
+    height: 100%;
+    color: #FFFFFF;
+}
+a {
+    color: #F09330;
+}
+a:hover {
+    color: #F5B878;
+    text-decoration: none;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.btn-flat {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+    border: medium none;
+    .rounded-corners;
+    box-shadow: none;
+    color: #FFFFFF;
+    font-weight: normal;
+    padding: 10px 20px;
+    text-shadow: none;
+    transition: all 0.5s ease 0s;
+    &hover {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    }
+}
+.jumbotron {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #874400),
+        color-stop(1, #F09330)
+    );
+    background-image: -o-linear-gradient(bottom, #874400 0%, #F09330 100%);
+    background-image: -moz-linear-gradient(bottom, #874400 0%, #F09330 100%);
+    background-image: -webkit-linear-gradient(bottom, #874400 0%, #F09330 100%);
+    background-image: -ms-linear-gradient(bottom, #874400 0%, #F09330 100%);
+    background-image: linear-gradient(to bottom, #874400 0%, #F09330 100%);
+    border-bottom: 1px solid #F5B878;
+    margin-bottom: 0;
+}
+.jumbotron h1 {
+	color: #FFF8F0;
+}
+.jumbotron p {
+	color: #FFEAD4;
+}
+.content {
+    height: 100%;
+    margin-bottom: 30px;
+}
+.content .sidebar {
+    font-size: 12px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, #874400),
+        color-stop(1, #F09330)
+    );
+    background-image: -o-linear-gradient(right, #874400 0%, #F09330 100%);
+    background-image: -moz-linear-gradient(right, #874400 0%, #F09330 100%);
+    background-image: -webkit-linear-gradient(right, #874400 0%, #F09330 100%);
+    background-image: -ms-linear-gradient(right, #874400 0%, #F09330 100%);
+    background-image: linear-gradient(to right, #874400 0%, #F09330 100%);
+    border-right: 1px solid #F5B878;
+    padding-right: 0;
+    padding-top: 30px;
+    height: 100%;
+}
+.content .sidebar h4 {
+    border-bottom: 1px solid #F09330;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+.content .sidebar > .nav > li > a {
+    color: #FFFFFF;
+    border-radius: 0;
+}
+.content .sidebar > .nav > li > a:hover, #sidebar > .nav > li > a:focus, #sidebar > .nav > li > a:active {
+    background-color: #F5B878;
+}
+.content .main {
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.content .main .page-header {
+    color: #F09330;
+    border-bottom-color: #F09330;
+}
+.content .main .alert {
+    margin: 40px 0 20px;
+}
+.content .main h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.content .main pre {
+    margin-bottom: 50px;
+}
+.footer {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.github-btn {
+    border: 0 none;
+    overflow: hidden;
+}
+.bs-docs-social {
+    margin-bottom: 20px;
+}
+.bs-docs-social-buttons {
+    display: inline-block;
+    list-style: none outside none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.bs-docs-social-buttons li {
+    display: inline-block;
+    line-height: 1;
+    padding: 5px 8px;
+}
