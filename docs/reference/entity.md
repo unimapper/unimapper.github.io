@@ -38,7 +38,7 @@ You can tell entity how to map your data.
 
 ~~~ php
 /**
- * @mapper MyMapper(table_name)
+ * @adapter MyAdapter(table_name)
  *
  * @property integer $id   m:primary
  * @property string  $text m:map(text_column_name)

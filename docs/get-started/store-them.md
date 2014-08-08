@@ -14,15 +14,15 @@ In this case we prefer a database so choosing our favorite [Dibi]({{ site.baseur
 
 ~~~ php
 $connection = new \DibiConnection(["driver" => "mysql", "host" => "localhost", "db" => "mydb"]);
-$databaseMapper = new UniMapper\Mapper\DibiMapper($connection, "Database");
+$databaseAdapter = new UniMapper\Dibi\Adapter($connection, "Database");
 ~~~
 
-Now you have defined mapper with database connection. But you must tell your entities how to connect. It can be done with `@mapper` definition. Complete your entities like this.
+Now you have defined adapter with database connection. But you must tell your entities how to connect. It can be done with `@adapter` definition. Complete your entities like this.
 
 **/model/entity/User.php**
 
 ~~~ php
- * @mapper Database(users)
+ * @adapter Database(users)
  *
  * @property integer  $id        m:primary
  * @property string   $username
@@ -34,7 +34,7 @@ Now you have defined mapper with database connection. But you must tell your ent
 **/model/entity/Order.php**
 
 ~~~ php
- * @mapper Database(orders)
+ * @adapter Database(orders)
  *
  * @property string   $code      m:primary
  * @property string   $company

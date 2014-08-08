@@ -25,7 +25,7 @@ class Order extends \UniMapper\Repository
 
 ~~~ php
 $orders = new MyApp\Model\Repository\Order;
-$orders->registerMapper($databaseMapper);
+$orders->registerAdapter($databaseAdapter);
 
 foreach ($orders->findAll() as $order) {
 	echo $order->company;

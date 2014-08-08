@@ -12,7 +12,7 @@
   - reference/collection
   - reference/repository
   - reference/query
-  - reference/mapper
+  - reference/adapter
 
 - title: Extensions
   docs:

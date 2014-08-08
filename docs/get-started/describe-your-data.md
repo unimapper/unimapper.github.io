@@ -23,7 +23,7 @@ but it is better to separate logic entities, repository and queries.
 index.php
 /model
 ../entity
-../mapper
+../adapter
 ../repository
 ~~~
 

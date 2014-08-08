@@ -42,13 +42,4 @@ Delete record.
 - whereAre()
 - orwhereAre()
 
-### custom ( `string` mapperName )
-Custom query is designed to call raw queries like REST api call.
-
-- get()
-- post()
-- put()
-- delete()
-- raw()
-
 ## Extending queries
