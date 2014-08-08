@@ -1,3 +1,6 @@
 name: UniMapper
 relative_permalinks: false
 markdown: kramdown
+kramdown:
+  coderay:
+    coderay_line_numbers: table
