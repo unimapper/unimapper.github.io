@@ -14,9 +14,9 @@ namespace MyApp\Model\Repository;
 
 class Order extends \UniMapper\Repository
 {
-    public function findAll()
+    public function find()
     {
-        return $this->query()->findAll()->execute();
+        return $this->query()->find()->execute();
     }
 }
 ~~~
@@ -27,7 +27,7 @@ class Order extends \UniMapper\Repository
 $orders = new MyApp\Model\Repository\Order;
 $orders->registerAdapter($databaseAdapter);
 
-foreach ($orders->findAll() as $order) {
+foreach ($orders->find() as $order) {
 	echo $order->company;
 }
 ~~~

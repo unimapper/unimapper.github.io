@@ -11,7 +11,7 @@ All queries are usually registered in query builder object that lives in every r
 
 ## Built-in queries
 
-#### findAll ( `string` property1, `string` property2 .. )
+#### find ( `string` property1, `string` property2 .. )
 Get all records as entity collection. You can use following filters:
 - where()
 - orWhere()
