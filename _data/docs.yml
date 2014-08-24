@@ -9,7 +9,6 @@
   docs:
   - reference/naming-conventions
   - reference/entity
-  - reference/collection
   - reference/repository
   - reference/query
   - reference/adapter
