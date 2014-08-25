@@ -8,10 +8,11 @@
 - title: Reference
   docs:
   - reference/naming-conventions
+  - reference/adapter
   - reference/entity
   - reference/repository
   - reference/query
-  - reference/adapter
+  - reference/validation
 
 - title: Extensions
   docs:
