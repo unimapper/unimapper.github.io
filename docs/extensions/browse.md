@@ -17,4 +17,8 @@ Support for [Flexibee](http://www.flexibee.eu) and it's REST api.
 #### [Nette](http://github.com/unimapper/unimapper-nette)
 Extension for [Nette](http://nette.org) framework
 
+## Community
+
 --------
+
+> Hey, what are you waiting for, [get involved]({{ site.baseurl }}/docs/extensions/get-involved)!
