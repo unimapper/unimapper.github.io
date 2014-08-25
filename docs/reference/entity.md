@@ -125,6 +125,3 @@ You can even extend entity with a new one. All properties will be inherited too.
 class UserDetail extends User
 {}
 ~~~
-
-### Active entity
-@todo

@@ -7,7 +7,7 @@ a {
     color: #F09330;
 }
 a:hover {
-    color: #F5B878;
+    color: #874400;
     text-decoration: none;
 }
 .navbar {
@@ -17,16 +17,16 @@ a:hover {
 .btn-flat {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
     border: medium none;
-    .rounded-corners;
     box-shadow: none;
     color: #FFFFFF;
     font-weight: normal;
     padding: 10px 20px;
     text-shadow: none;
     transition: all 0.5s ease 0s;
-    &hover {
-        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
-    }
+}
+.btn-flat:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    color: #e7e7e7;
 }
 .jumbotron {
     background-image: -webkit-gradient(
@@ -45,67 +45,46 @@ a:hover {
     margin-bottom: 0;
 }
 .jumbotron h1 {
-	color: #FFF8F0;
+    color: #FFF8F0;
 }
 .jumbotron p {
-	color: #FFEAD4;
+    color: #FFEAD4;
 }
-.content {
-    height: 100%;
-    margin-bottom: 30px;
-}
-.content .sidebar {
-    font-size: 12px;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, #874400),
-        color-stop(1, #F09330)
-    );
-    background-image: -o-linear-gradient(right, #874400 0%, #F09330 100%);
-    background-image: -moz-linear-gradient(right, #874400 0%, #F09330 100%);
-    background-image: -webkit-linear-gradient(right, #874400 0%, #F09330 100%);
-    background-image: -ms-linear-gradient(right, #874400 0%, #F09330 100%);
-    background-image: linear-gradient(to right, #874400 0%, #F09330 100%);
-    border-right: 1px solid #F5B878;
-    padding-right: 0;
-    padding-top: 30px;
-    height: 100%;
-}
-.content .sidebar h4 {
-    border-bottom: 1px solid #F09330;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    padding-right: 15px;
-}
-.content .sidebar > .nav > li > a {
-    color: #FFFFFF;
-    border-radius: 0;
-}
-.content .sidebar > .nav > li > a:hover, #sidebar > .nav > li > a:focus, #sidebar > .nav > li > a:active {
-    background-color: #F5B878;
-}
-.content .main {
-    height: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
+.docs-container {
     background-color: #FFFFFF;
     color: #000000;
+    min-height: 700px;
 }
-.content .main .page-header {
+.docs-container .docs-submenu {
+    padding-top: 40px;
+}
+.docs-container .page-header {
     color: #F09330;
     border-bottom-color: #F09330;
 }
-.content .main .alert {
+.docs-container .docs-content .alert {
     margin: 40px 0 20px;
 }
-.content .main h3 {
+.docs-container .docs-content .page-header {
+    margin-bottom: 50px;
+}
+.docs-container .docs-content h3,
+.docs-container .docs-content h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.content .main pre {
+.docs-container .docs-content pre {
     margin-bottom: 50px;
+}
+.docs-container .docs-content blockquote {
+    font-size: 14px;
+    border-left-color: #e7e7e7;
+    background-color: #f8f8f8;
+    padding: 15px 30px;
+}
+.docs-container .docs-footer {
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .footer {
     padding-top: 20px;
