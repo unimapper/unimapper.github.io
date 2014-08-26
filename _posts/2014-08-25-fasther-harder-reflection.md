@@ -13,7 +13,7 @@ I made some performance test with this benchmark and the result was something be
 
 ### After refactoring
 But after a few cups of coffee and one sleepless saturday night, came the results in the form of ~ `5s / 19 MB`.
-Test focus on data *(~300000 rows)* stored in MySQL database, which are joined with 1:N and M:N relation, so I choosed our Dibi extension.
+Test focus on data *(~300000 rows)* stored in MySQL database, which are joined with 1:N and M:N relation, so I choosed our [Dibi extension](https://github.com/unimapper/dibi).
 After all, you can test it on your own from [here](https://github.com/bauer01/db-benchmark/tree/unimapper).
 
 ### What I actually did?
