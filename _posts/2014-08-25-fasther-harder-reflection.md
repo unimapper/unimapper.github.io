@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: news
 title: "Faster, harder, reflection!"
 author: bauer01
 categories: [development]

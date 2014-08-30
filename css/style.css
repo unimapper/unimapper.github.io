@@ -50,39 +50,41 @@ a:hover {
 .jumbotron p {
     color: #FFEAD4;
 }
-.docs-container {
+.container-content {
+    min-height: 650px;
+}
+.oontainer-docs {
     background-color: #FFFFFF;
     color: #000000;
-    min-height: 700px;
 }
-.docs-container .docs-submenu {
-    padding-top: 40px;
-}
-.docs-container .page-header {
+.oontainer-docs .page-header {
     color: #F09330;
     border-bottom-color: #F09330;
 }
-.docs-container .docs-content .alert {
+.oontainer-docs .docs-submenu {
+    padding-top: 40px;
+}
+.oontainer-docs .alert {
     margin: 40px 0 20px;
 }
-.docs-container .docs-content .page-header {
+.oontainer-docs .page-header {
     margin-bottom: 50px;
 }
-.docs-container .docs-content h3,
-.docs-container .docs-content h2 {
+.oontainer-docs h3,
+.oontainer-docs h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.docs-container .docs-content pre {
+.oontainer-docs pre {
     margin-bottom: 50px;
 }
-.docs-container .docs-content blockquote {
+.oontainer-docs blockquote {
     font-size: 14px;
     border-left-color: #e7e7e7;
     background-color: #f8f8f8;
     padding: 15px 30px;
 }
-.docs-container .docs-footer {
+.oontainer-docs .docs-footer {
     margin-top: 40px;
     margin-bottom: 20px;
 }

@@ -21,14 +21,14 @@ layout: default
         </div>
     </div>
 </div>
-<div class="docs-container container">
+<div class="container-content oontainer-docs container">
     <div class="row">
         <div class="docs-submenu col-md-3">
             {% for section in site.data.docs %}
                 {% include docs_menu.html items=section.docs %}
             {% endfor %}
         </div>
-        <div class="docs-content col-md-9">
+        <div class="col-md-9">
             <h1 class="page-header">{{ page.title }}</h1>
             {{ content }}
         </div>
