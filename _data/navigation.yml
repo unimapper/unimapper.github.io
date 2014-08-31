@@ -1,8 +1,11 @@
 - title: Documentation
-  url: /docs/
+  url: /docs
+  start_page: /get-started/install
 
 - title: News
-  url: /news/
+  url: /news
+  start_page: /
 
 - title: Support
-  url: /support/
+  url: /support
+  start_page: /

@@ -3,27 +3,11 @@ layout: default
 ---
 
 {% include navigation.html %}
+{% include docs_header.html %}
 
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h1>Documentation</h1>
-                <p class="lead text-muted">Deeper library knowledge</p>
-            </div>
-            <div class="col-md-5">
-                <h1>
-                {% for section in site.data.docs %}
-                    <a href="{{ site.baseurl }}{{ section.link }}{{ section.first_link }}" class="btn btn-lg {% if page.url contains section.link %}btn-primary active{% else %}btn-flat{% endif %}">{{ section.title }}</a>
-                {% endfor %}
-                </h1>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-content oontainer-docs container">
+<div class="container-content container">
     <div class="row">
-        <div class="docs-submenu col-md-3">
+        <div class="col-md-3">
             {% for section in site.data.docs %}
                 {% if page.url contains section.link %}
                     {% include docs_menu.html items=section.docs %}
@@ -33,7 +17,7 @@ layout: default
         <div class="col-md-9">
             <h1 class="page-header">{{ page.title }}</h1>
             {{ content }}
-            <div class="docs-footer">{% include docs_nav.html %}</div>
+            {% include docs_nav.html %}
         </div>
     </div>
 </div>

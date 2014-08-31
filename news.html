@@ -1,10 +1,22 @@
 ---
 layout: news
 title: News
-permalink: /news/
 author: all
 ---
 
 {% for post in site.posts %}
-  {% include news_post.html %}
+    <div>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <p class="lead text-muted">
+        {{ post.date | date_to_string }} by <a href="https://github.com/{{ post.author }}">{{ post.author }}</a>
+      </p>
+      <p>
+        {% for category in post.categories %}
+          <span class="label label-primary">{{ category }}</span>
+        {% endfor %}
+      </p>
+      <div>
+        {{ post.excerpt }}
+      </div>
+    </div>
 {% endfor %}

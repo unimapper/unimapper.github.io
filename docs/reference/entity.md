@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: Entity
-permalink: /docs/reference/entity/
 ---
 
 Entity usually represents a unique object in your application model schema with which you are trying to faithfully capture the reality.

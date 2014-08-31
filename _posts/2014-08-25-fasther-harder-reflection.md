@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: post
 title: "Faster, harder, reflection!"
 author: bauer01
 categories: [development]

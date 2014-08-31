@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: post
 title: "Project published on Github"
 author: bauer01
 categories: [development]

@@ -1,5 +1,4 @@
 name: UniMapper
-relative_permalinks: false
 markdown: kramdown
 kramdown:
   coderay:

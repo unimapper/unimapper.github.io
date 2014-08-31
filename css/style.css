@@ -16,12 +16,8 @@ a:hover {
 }
 .btn-flat {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
-    border: medium none;
-    box-shadow: none;
+    border-color: transparent;
     color: #FFFFFF;
-    font-weight: normal;
-    padding: 10px 20px;
-    text-shadow: none;
     transition: all 0.5s ease 0s;
 }
 .btn-flat:hover {
@@ -52,41 +48,36 @@ a:hover {
 }
 .container-content {
     min-height: 650px;
-}
-.oontainer-docs {
     background-color: #FFFFFF;
     color: #000000;
+    padding: 30px;
 }
-.oontainer-docs .page-header {
+.container-content .page-header {
     color: #F09330;
     border-bottom-color: #F09330;
 }
-.oontainer-docs .docs-submenu {
+.container-content .nav-stacked {
     padding-top: 40px;
 }
-.oontainer-docs .alert {
+.container-content .alert {
     margin: 40px 0 20px;
 }
-.oontainer-docs .page-header {
+.container-content .page-header {
     margin-bottom: 50px;
 }
-.oontainer-docs h3,
-.oontainer-docs h2 {
+.container-content h3,
+.container-content h2 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.oontainer-docs pre {
+.container-content pre {
     margin-bottom: 50px;
 }
-.oontainer-docs blockquote {
+.container-content blockquote {
     font-size: 14px;
     border-left-color: #e7e7e7;
     background-color: #f8f8f8;
     padding: 15px 30px;
-}
-.oontainer-docs .docs-footer {
-    margin-top: 40px;
-    margin-bottom: 20px;
 }
 .footer {
     padding-top: 20px;

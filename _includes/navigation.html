@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% for link in site.data.navigation %}
                     <li {% if page.url contains link.url %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+                        <a href="{{ site.baseurl }}{{ link.url }}{{ link.start_page }}">{{ link.title }}</a>
                     </li>
                 {% endfor %}
                 <li class="divider"></li>

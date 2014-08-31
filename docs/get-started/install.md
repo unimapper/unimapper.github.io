@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: Install
-permalink: /docs/get-started/install/
 next_section: /get-started/describe-your-data
 ---
 

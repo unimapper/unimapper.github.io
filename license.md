@@ -1,7 +1,6 @@
 ---
 layout: license
 title: License
-permalink: /license/
 ---
 
 The MIT License (MIT)
