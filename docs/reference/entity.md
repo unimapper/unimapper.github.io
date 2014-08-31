@@ -6,74 +6,52 @@ permalink: /docs/reference/entity/
 
 Entity usually represents a unique object in your application model schema with which you are trying to faithfully capture the reality.
 
-The easiest entity can be a simple class with properties that represents a single table record in database for example.
+## Types
+
+- **Basic** `string`, `integer`, `boolean`, `double`, `array`
+- **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
+- **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
+- **Entity\[\]** Entity collection stored inside the `UniMapper\EntityCollection` class
+
+## Primary
+This option is very important, because it represents some kind of *foreign key*
+similar to relational database and every entity can be identified by it.
+Usually some `id` column in your database for example.
+It is defined by `m:primary` option.
 
 ~~~ php
 /**
- * @mapper Database(table_name)
- *
- * @property integer  $id        m:primary
- * @property string   $username
- * @property DateTime $createdOn
+ * @property integer $id m:primary
  */
 class User extends \UniMapper\Entity
 {}
 ~~~
 
-### Supported types
+## Mapping
+You can tell entity how to map your data with `m:map`.
 
-**Basic** `string`, `integer`, `boolean`, `double`, `array`
-
-**[DateTime](http://www.php.net/manual/en/class.datetime.php)**
-
-**Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
-
-**Entity\[\]** Entity collection as `UniMapper\EntityCollection`
-
-### Primary property
-Very important is `m:primary` as [primary property](#primary-property), because it represents some kind of *foreign key* similar to relational database and every entity can be identified by it. Usually some `id` column in your database for example.
-
-### Mapping
-You can tell entity how to map your data.
+- `name` - Describes alternative column name in database for example.
+- `filter` - You can tell how to map out/in data.
 
 ~~~ php
 /**
- * @adapter MyAdapter(table_name)
- *
- * @property integer $id   m:primary
- * @property string  $text m:map(text_column_name)
- */
-class MyEntity extends \UniMapper\Entity
-{}
-~~~
-
-### Property validators
-Built your own validation logic on every property. You only need to add `m:validate` filter with validation rule and define the corresponding function like `validationRuleName($value)`.
-
-See the example below.
-
-~~~ php
-/**
- * @property integer $score m:validate(score)
+ * @property array $list m:map(name='json_data';filter=jsonToArray|arrayToJson)
  */
 class User extends \UniMapper\Entity
 {
-    public static function validateScore($value)
+    public static function jsonToArray($value)
     {
-         return $value >= 1 && $value <= 5;
+        return json_decode($value);
+    }
+
+    public static function arrayToJson(array $value)
+    {
+        return json_encode($value);
     }
 }
-
-$user = new User;
-$user->score = 1 // OK
-$user->score = 6 // Throws exception
 ~~~
 
-> Tip! You can even define multiple rules `m:validate(rule1|rule2...)`. Each rule must be met.
-
-There are also some built-in rules: `url`, `email`, `ipv4`, `ipv6`.
-
-### Computed property
+## Computed
 A kind of virtual property, mostly dependent on other real properties so it is readonly and can not be set directly. It can be helpful in situations like price computing for example.
 
 ~~~ php
@@ -111,9 +89,9 @@ $order->products[] = $product2;
 echo $order->price; // Will be 15.0
 ~~~
 
-> Remember! Computed property can not be mixed with other filters.
+> Remember! Computed property can not be mixed with other options.
 
-### Entity inheritance
+## Inheritance
 You can even extend entity with a new one. All properties will be inherited too. Just write a {@inheritdoc}.
 
 ~~~ php

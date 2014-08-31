@@ -29,7 +29,7 @@ class OrderRepository extends \UniMapper\Repository
 ## Built-in queries
 
 ### find ( `string` property1, `string` property2 .. )
-Get all records as entity collection. You can use following filters:
+Get all records as entity collection. You can use following options:
 - where()
 - orWhere()
 - whereAre()
