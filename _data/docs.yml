@@ -9,14 +9,15 @@
 
 - title: Reference
   link: /docs/reference
-  first_link: /naming-conventions
+  first_link: /naming-convention
   docs:
-  - reference/naming-conventions
+  - reference/naming-convention
   - reference/adapter
   - reference/entity
   - reference/repository
   - reference/query
   - reference/validation
+  - reference/reflection
 
 - title: Extensions
   link: /docs/extensions
