@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Describe your data
+permalink: /docs/get-started/describe-your-data/
 prev_section: /get-started/install
 next_section: /get-started/store-them
 ---

@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Browse
+permalink: /docs/extensions/browse/
 ---
 
 ## Official

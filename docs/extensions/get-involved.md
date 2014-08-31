@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Get involved
+permalink: /docs/extensions/get-involved/
 ---
 
 > You can share your extensions [here](https://github.com/unimapper/unimapper.github.io/issues/new).

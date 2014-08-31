@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: Store them
+permalink: /docs/get-started/store-them/
 prev_section: /get-started/describe-your-data
 next_section: /get-started/work-with-it
 ---
