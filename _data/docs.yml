@@ -1,4 +1,6 @@
 - title: Get started
+  link: /docs/get-started
+  first_link: /install
   docs:
   - get-started/install
   - get-started/describe-your-data
@@ -6,6 +8,8 @@
   - get-started/work-with-it
 
 - title: Reference
+  link: /docs/reference
+  first_link: /naming-conventions
   docs:
   - reference/naming-conventions
   - reference/adapter
@@ -15,6 +19,8 @@
   - reference/validation
 
 - title: Extensions
+  link: /docs/extensions
+  first_link: /browse
   docs:
   - extensions/browse
   - extensions/get-involved
