@@ -16,6 +16,7 @@
   - reference/naming-convention
   - reference/adapter
   - reference/entity
+  - reference/associations
   - reference/repository
   - reference/query
   - reference/validation
