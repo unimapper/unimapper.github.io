@@ -1,7 +1,6 @@
 - title: Get started
   link: /docs/get-started
   first_link: /install
-  icon: fa-flag-checkered
   docs:
   - get-started/install
   - get-started/describe-your-data
@@ -11,7 +10,6 @@
 - title: Reference
   link: /docs/reference
   first_link: /naming-convention
-  icon: fa-list
   docs:
   - reference/naming-convention
   - reference/adapter
@@ -25,7 +23,6 @@
 - title: Extensions
   link: /docs/extensions
   first_link: /browse
-  icon: fa-plus-circle
   docs:
   - extensions/browse
   - extensions/get-involved
