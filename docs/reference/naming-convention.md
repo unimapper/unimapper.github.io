@@ -10,10 +10,10 @@ Just define your mask with `*`.
 **Example:**
 
 ~~~ php
-use UniMapper\NamingConventions;
+use UniMapper\NamingConventions as UNC;
 
-NamingConventions::$entityMask = "YourApp\Model\Entity\*"; // Default is 'Model\Entity\*'
-NamingConventions::$repositoryMask = "YourApp\Model\Repository\*Repository"; // Default is 'Model\Repository\*Repository'
+UNC::$entityMask = "YourApp\Model\Entity\*"; // Default is 'Model\Entity\*'
+UNC::$repositoryMask = "YourApp\Model\Repository\*Repository"; // Default is 'Model\Repository\*Repository'
 ~~~
 
 > Remember! These settings must be set before you start using the orm.
