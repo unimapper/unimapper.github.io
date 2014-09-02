@@ -77,15 +77,20 @@ class Order extends \UniMapper\Entity
     }
 }
 
-$order = new Order;
-$product1 = new Product;
+$orderRepository = new OrderRepository;
+$productRepository = new ProductRepository;
+
+$order = $orderRepository->createEntity();
+$product1 = $productRepository->createEntity();
 $product1->price = 5.0;
 $order->products[] = $product1;
+
 echo $order->price; // Will be 5.0
 
-$product2 = new Product;
+$product2 = $productRepository->createEntity();
 $product2->price = 10.0;
 $order->products[] = $product2;
+
 echo $order->price; // Will be 15.0
 ~~~
 
