@@ -23,6 +23,7 @@ a:hover {
 .btn-flat:hover {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
     color: #e7e7e7;
+    border-color: transparent;
 }
 .jumbotron {
     background-image: -webkit-gradient(
