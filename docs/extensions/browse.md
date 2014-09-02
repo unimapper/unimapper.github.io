@@ -9,7 +9,7 @@ permalink: /docs/extensions/browse/
 --------
 
 #### [Dibi](http://github.com/unimapper/unimapper-dibi)
-Implementation of [Dibi](http://dibiphp.com) (database abstract layer), which supports MySQL, Postgres, MS SQL and SQLite.
+Implementation of [Dibi](http://dibiphp.com) (database abstract layer), which supports MySQL, PostgreSQL, MSSQL and SQLite.
 
 #### [Flexibee](http://github.com/unimapper/unimapper-flexibee)
 Support for [Flexibee](http://www.flexibee.eu) and it's REST api.
