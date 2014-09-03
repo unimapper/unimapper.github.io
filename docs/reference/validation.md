@@ -13,7 +13,7 @@ Another attractive feature is validation. We believe that validation belongs to 
 $entity->getValidator()
     ->addRule(function(\UniMapper\Entity $entity) {
         return $entity->text === "foo";
-    }, "Text must be foo!")
+    }, "Text must be foo!");
 ~~~
 
 ### Property
@@ -28,7 +28,25 @@ $entity->getValidator()
 > Remember! [Computed]({{ site.baseUrl }}/docs/reference/entity/#computed) properties can not be validated!
 
 ### Nested entities
+~~~ php
+$order->getValidator()
+    ->on("product")
+        ->addRule(Validator::FILLED, "Product is required!");
+$order->customer->getValidator()
+    ->on("email")
+        ->addRule(Validator::EMAIL, "Invalid e-mail!");
+$order->customer->branchOffice->getValidator()
+    ->on("phone")
+        ->addRule(Validator::FILLED, "Invalid phone!");
+~~~
 
 ## Conditions
+~~~ php
+$entity->getValidator()
+    ->on("ip")
+        ->addCondition(Validator::FILLED)
+            ->addRule(Validator::IP, "Invalid IP format!")
+        ->endCondition()
+~~~
 
-## Messages
+## Usage
