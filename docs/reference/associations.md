@@ -4,7 +4,7 @@ title: Associations
 permalink: /docs/reference/associations/
 ---
 
-Sometimes you need to describe relation between two entities and this can be done with associations. Every association is represented by an option `m:assoc` with relation type description and its property should be target entity or entity collection, it depends on association type you choose.
+Sometimes you need to describe relation between two entities and this can be done with associations. Every association is represented by an option `m:assoc` with relation type description and its property should be target [entity]({{ site.baseurl}}/docs/reference/entity) or entity [collection]({{ site.baseurl}}/docs/reference/entity#collection), it depends on association type you choose.
 
 ## Supported types
 

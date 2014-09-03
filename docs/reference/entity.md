@@ -11,7 +11,7 @@ Entity usually represents a unique object in your application model schema with 
 - **Basic** `string`, `integer`, `boolean`, `double`, `array`
 - **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
 - **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
-- **Entity\[\]** Entity collection stored inside the `UniMapper\EntityCollection` class
+- **Entity\[\]** Entity [collection](#collection) stored inside the `UniMapper\EntityCollection` class
 
 ## Primary
 This option is very important, because it represents some kind of *foreign key*
@@ -111,3 +111,6 @@ You can even extend entity with a new one. All properties will be inherited too.
 class UserDetail extends User
 {}
 ~~~
+
+## Collection
+Keeps entities with same type and can be accessed as [ArrayObject](http://php.net/manual/en/class.arrayobject.php).
