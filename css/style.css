@@ -76,8 +76,9 @@ a:hover {
 }
 .container-content blockquote {
     font-size: 14px;
-    border-left-color: #e7e7e7;
-    background-color: #f8f8f8;
+    border-left-color: #f09330;
+    background-color: #F2D2A5;
+    color: #754400;
     padding: 15px 30px;
 }
 .footer {
