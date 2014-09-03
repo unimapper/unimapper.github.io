@@ -16,4 +16,4 @@ UNC::$entityMask = "YourApp\Model\Entity\*"; // Default is 'Model\Entity\*'
 UNC::$repositoryMask = "YourApp\Model\Repository\*Repository"; // Default is 'Model\Repository\*Repository'
 ~~~
 
-> Remember! These settings must be set before you start using the orm.
+> These settings must be set before you start using the orm.

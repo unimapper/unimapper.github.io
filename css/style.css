@@ -74,10 +74,14 @@ a:hover {
 .container-content pre {
     margin-bottom: 50px;
 }
+.container-content code {
+    color: #004E91;
+    background-color: #E8E8E8;
+}
 .container-content blockquote {
     font-size: 14px;
     border-left-color: #f09330;
-    background-color: #F2D2A5;
+    background-color: #F0DCC0;
     color: #754400;
     padding: 15px 30px;
 }

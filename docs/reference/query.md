@@ -106,4 +106,4 @@ class OrderRepository extends \UniMapper\Repository
 }
 ~~~
 
-> **Tip!** Method name of custom query is generated from class base name, but you can change it manually by overloading method *getName()*, but remember that resulted query name must be unique!
+> Method name of custom query is generated from class base name, but you can change it manually by overloading method *getName()*, but remember that resulted query name must be unique!

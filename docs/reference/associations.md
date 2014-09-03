@@ -52,6 +52,6 @@ class CustomerRepository extends \UniMapper\Entity
 ~~~
 
 ## Remote associations
-> **Warning!** This feature is experimental and should be available in version 1.1.0 and higher.
+> This feature is experimental and should be available in version 1.1.0 and higher.
 
 You can even associate entities with different adapters across multiple data stores.

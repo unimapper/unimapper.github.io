@@ -94,7 +94,7 @@ $order->products[] = $product2;
 echo $order->price; // Will be 15.0
 ~~~
 
-> Remember! Computed property can not be mixed with other options.
+> Computed property can not be mixed with other options.
 
 ## Associations
 See [this article]({{ site.baseurl }}/docs/reference/associations).

@@ -25,7 +25,7 @@ $entity->getValidator()
         ->addRule(Validator::EMAIL, "Invalid e-mail format!");
 ~~~
 
-> Remember! [Computed]({{ site.baseUrl }}/docs/reference/entity/#computed) properties can not be validated!
+> [Computed]({{ site.baseUrl }}/docs/reference/entity/#computed) properties can not be validated!
 
 ### Nested entities
 ~~~ php
