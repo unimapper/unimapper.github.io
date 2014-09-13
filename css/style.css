@@ -78,6 +78,10 @@ a:hover {
     color: #004E91;
     background-color: #E8E8E8;
 }
+.container-content pre code {
+    color: #000000;
+    background-color: transparent;
+}
 .container-content blockquote {
     font-size: 14px;
     border-left-color: #f09330;
