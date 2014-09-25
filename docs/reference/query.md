@@ -30,12 +30,10 @@ class OrderRepository extends \UniMapper\Repository
 
 ### find ( `string` property1, `string` property2 .. )
 Get all records as entity collection. You can use following options:
-- where()
-- orWhere()
-- whereAre()
-- orwhereAre()
-- limit()
-- offset()
+
+- limit( `integer` )
+- offset( `integer` )
+- [conditions](#Conditions)
 
 ### findOne ( `mixed` primaryValue )
 Get single unique record by priamry property value.
@@ -46,18 +44,21 @@ Insert a new record
 ### update ( `array` $data )
 Update record.
 
-- where()
-- orWhere()
-- whereAre()
-- orwhereAre()
+- [conditions](#Conditions)
 
 ### delete ()
 Delete record.
 
+- [conditions](#Conditions)
+
+### Conditions
+
 - where()
 - orWhere()
 - whereAre()
 - orwhereAre()
+
+> Be aware of operator operator precedence, depending on your current [adapter]({{ site.baseurl }}/docs/reference/adapter/).
 
 ## Custom queries
 
