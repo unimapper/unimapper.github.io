@@ -4,10 +4,10 @@ title: Naming convention
 permalink: /docs/reference/naming-convention/
 ---
 
-Naming conventions are neccesary if your want to have your [entities]({{ site.baseurl }}/docs/reference/entity/) or [repositories]({{ site.baseurl }}/docs/reference/repository/) classes under the certain [namespace](http://www.php.net/manual/en/language.namespaces.php).
+Naming conventions are neccesary if you want to have your [entity]({{ site.baseurl }}/docs/reference/entity/) or [repository]({{ site.baseurl }}/docs/reference/repository/) classes under the certain [namespace](http://www.php.net/manual/en/language.namespaces.php).
 Just define your mask with `*`.
 
-**Example:**
+**Example**
 
 ~~~ php
 use UniMapper\NamingConventions as UNC;

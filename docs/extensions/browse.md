@@ -14,8 +14,14 @@ Implementation of [Dibi](http://dibiphp.com) (database abstract layer), which su
 #### [Flexibee](http://github.com/unimapper/unimapper-flexibee)
 Support for [Flexibee](http://www.flexibee.eu) and it's REST api.
 
+#### [Mongo](http://github.com/unimapper/unimapper-mongo)
+Support for [MongoDB](http://www.mongodb.org/).
+
 #### [Nette](http://github.com/unimapper/unimapper-nette)
-Extension for [Nette](http://nette.org) framework
+Extension for [Nette](http://nette.org) framework.
+
+#### [PlantUml](http://github.com/unimapper/unimapper-plantuml)
+[PlantUml](http://plantuml.sourceforge.net) schema generator.
 
 ## Community
 

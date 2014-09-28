@@ -51,6 +51,8 @@ class User extends \UniMapper\Entity
 }
 ~~~
 
+## Adapter
+
 ## Computed
 A kind of virtual property, mostly dependent on other real properties so it is readonly and can not be set directly. It can be helpful in situations like price computing for example.
 

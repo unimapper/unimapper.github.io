@@ -3,9 +3,11 @@
   first_link: /install
   docs:
   - get-started/install
-  - get-started/describe-your-data
-  - get-started/store-them
-  - get-started/work-with-it
+  - get-started/task
+  - get-started/create-app
+  - get-started/entities
+  - get-started/connections
+  - get-started/repositories
 
 - title: Reference
   link: /docs/reference
