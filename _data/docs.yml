@@ -21,6 +21,7 @@
   - reference/query
   - reference/validation
   - reference/reflection
+  - reference/cache
 
 - title: Extensions
   link: /docs/extensions
