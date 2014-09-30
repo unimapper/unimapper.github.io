@@ -6,7 +6,17 @@ prev_section: /get-started/create-app
 next_section: /get-started/connections
 ---
 
-First of all we need to describe how the data is stored. This can be done with [entities]({{ site.baseurl }}/docs/reference/entity) and we have 3 entities in this case.
+First of all we need to describe how the data is stored. This can be done with [entities]({{ site.baseurl }}/docs/reference/entity).
+
+And we have 3 entities in this case.
+
+## Customer
+
+Represents customer information from MySQL table `customers`. Notice that there is
+a [computed property]({{ site.baseeurl}}/docs/reference/entity#computed) `fullName`
+that contains customer's full name composed of name and surname and
+[association]({{ site.baseeurl}}/docs/reference/associations#n---belongstomany)
+`orders` that joins associated orders as [entity collection]({{ site.baseeurl}}/docs/reference/entity#collection) by column `customer_id` from MySQL table `orders`.
 
 **./Model/Entity/Customer.php**
 
@@ -34,6 +44,8 @@ class Customer extends \UniMapper\Entity
 };
 ~~~
 
+## Invoice
+
 **./Model/Entity/Invoice.php**
 
 ~~~ php
@@ -50,6 +62,8 @@ class Invoice extends \UniMapper\Entity
 
 }
 ~~~
+
+## Order
 
 **./Model/Entity/Order.php**
 
@@ -74,4 +88,4 @@ class Order extends \UniMapper\Entity
 }
 ~~~
 
-> Do not forget to require all these files in **index.php**!
+> And do not forget to require all these files in **index.php** too!

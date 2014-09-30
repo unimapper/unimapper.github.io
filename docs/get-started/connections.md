@@ -6,7 +6,7 @@ prev_section: /get-started/entities
 next_section: /get-started/repositories
 ---
 
-So we know how and where are entities stored and now we need to define connection between our application and storages we have. For this purpose we use [adapters]({{ site.baseurl }}/docs/reference/adapter).
+We know how and where are entities stored and now we need to define connection between our application and storages we have. For this purpose we use [adapters]({{ site.baseurl }}/docs/reference/adapter).
 
 And there are two adapters in our application.
 
