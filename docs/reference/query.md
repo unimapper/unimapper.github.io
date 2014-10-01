@@ -29,14 +29,15 @@ class OrderRepository extends \UniMapper\Repository
 ## Built-in queries
 
 ### find ( `string` property1, `string` property2 .. )
-Get all records as entity collection. You can use following options:
+Get all records as entity collection. You can use the following options:
 
 - limit( `integer` )
 - offset( `integer` )
 - [conditions](#Conditions)
+- cached( `boolean`, `array` [options]({{ site.baseurl}}/docs/reference/cache#options) )
 
 ### findOne ( `mixed` primaryValue )
-Get single unique record by priamry property value.
+Get a single unique record by primary property value.
 
 ### insert ( `array` $data )
 Insert a new record
