@@ -15,7 +15,7 @@ And we have 3 entities in this case.
 Represents customer information from MySQL table `customers`. Notice that there is
 a [computed property]({{ site.baseeurl}}/docs/reference/entity#computed) `fullName`
 that contains customer's full name composed of name and surname and
-[association]({{ site.baseeurl}}/docs/reference/associations#n---belongstomany)
+[association]({{ site.baseeurl}}/docs/reference/associations#n---onetomany)
 `orders` that joins associated orders as [entity collection]({{ site.baseeurl}}/docs/reference/entity#collection) by column `customer_id` from MySQL table `orders`.
 
 **./Model/Entity/Customer.php**

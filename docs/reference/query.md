@@ -52,6 +52,10 @@ Delete record.
 
 - [conditions](#Conditions)
 
+### associate ( `mixed` $primary, `UniMapper\Association` $association )
+
+Persists an [association]({{ site.baseeurl}}/docs/reference/associations).
+
 ### Conditions
 
 - where()

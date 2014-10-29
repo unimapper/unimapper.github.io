@@ -101,18 +101,5 @@ echo $order->price; // Will be 15.0
 ## Associations
 See [this article]({{ site.baseurl }}/docs/reference/associations).
 
-## Inheritance
-You can even extend entity with a new one. All properties will be inherited too. Just write a {@inheritdoc}.
-
-~~~ php
-/**
- * {@inheritdoc}
- *
- * @property string $fullName
- */
-class UserDetail extends User
-{}
-~~~
-
 ## Collection
 Keeps entities with same type and can be accessed as [ArrayObject](http://php.net/manual/en/class.arrayobject.php).
