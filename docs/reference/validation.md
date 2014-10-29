@@ -4,7 +4,8 @@ title: Validation
 permalink: /docs/reference/validation/
 ---
 
-Another attractive feature is validation. We believe that validation belongs to the model, all in one place. And with this library you can really create advanced validation with very clear writing. So no more `IF` hell in your code :-).
+Suits perfectly to situations when you need to validate data in your model layer or developing front-end application bundled with some REST api together.
+Validation syntax can be very simple or much advanced with very clear writing without any IF hell in your code.
 
 ## Rules
 
