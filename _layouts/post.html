@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 {% include navigation.html %}
@@ -13,4 +14,5 @@ layout: default
 <div class="container-content container">
     <h1>{{ post.title }}</h1>
     {{ content }}
+    {% include comments.html %}
 </div>
