@@ -101,6 +101,9 @@ a:hover, a:focus, a:active {
     color: #fff;
     padding: 15px 30px;
 }
+.container-content blockquote a:hover {
+    color: #c7c0de;
+}
 .footer {
     padding-top: 20px;
     padding-bottom: 15px;
