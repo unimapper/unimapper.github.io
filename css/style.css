@@ -1,18 +1,31 @@
 html, body {
-    background-color: #333333;
-    height: 100%;
-    color: #FFFFFF;
+    background-color: #fff;
+    color: #2c3e50;
+    font-size: 15px;
+    line-height: 1.42857;
+    font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
 }
 a {
-    color: #F09330;
+    color: #18bc9c;
 }
-a:hover {
-    color: #874400;
+a:hover, a:focus, a:active {
+    color: #362c57;
     text-decoration: none;
 }
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+}
+.btn-primary {
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+    color: #fff;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #362c57;
 }
 .btn-flat {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
@@ -25,46 +38,43 @@ a:hover {
     color: #e7e7e7;
     border-color: transparent;
 }
+.bg-primary {
+    background-color: #18bc9c;
+}
+.bg-primary a {
+    color: #362c57;
+}
 .jumbotron {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #874400),
-        color-stop(1, #F09330)
-    );
-    background-image: -o-linear-gradient(bottom, #874400 0%, #F09330 100%);
-    background-image: -moz-linear-gradient(bottom, #874400 0%, #F09330 100%);
-    background-image: -webkit-linear-gradient(bottom, #874400 0%, #F09330 100%);
-    background-image: -ms-linear-gradient(bottom, #874400 0%, #F09330 100%);
-    background-image: linear-gradient(to bottom, #874400 0%, #F09330 100%);
-    border-bottom: 1px solid #F5B878;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    background-color: #362c57;
+    background-image: radial-gradient(at 50% top , rgba(123, 84, 182, 0.6) 0px, rgba(123, 84, 182, 0) 75%), radial-gradient(at right top , rgba(127, 74, 162, 0.5) 0px, rgba(127, 74, 162, 0) 57%);
+    background-repeat: no-repeat;
+    background-size: 100% 1000px;
+    color: #e7e4f1;
     margin-bottom: 0;
+    border-bottom: 1px solid #e7e4f1;
 }
 .jumbotron h1 {
-    color: #FFF8F0;
+    color: #18bc9c;
 }
-.jumbotron p {
-    color: #FFEAD4;
+.jumbotron .btn-primary.active {
+    background-color: #c7c0de;
+    color: #362c57;
+    border: none;
 }
 .container-content {
     min-height: 650px;
-    background-color: #fafafa;
-    color: #000000;
     padding: 30px;
-}
-.container-content .page-header {
-    color: #F09330;
-    border-bottom-color: #F09330;
 }
 .container-content .nav-stacked {
     padding-top: 40px;
 }
-.container-content .alert {
-    margin: 40px 0 20px;
+.container-content .nav-pills > li.active > a {
+    background-color: #2c3e50;
 }
 .container-content .page-header {
     margin-bottom: 50px;
+    border-color: #c7c0de;
 }
 .container-content h4,
 .container-content h3,
@@ -87,7 +97,7 @@ a:hover {
     font-size: 14px;
     border-left: none;
     border-radius: 4px;
-    background-color: #333;
+    background-color: #2c3e50;
     color: #fff;
     padding: 15px 30px;
 }

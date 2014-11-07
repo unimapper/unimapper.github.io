@@ -16,8 +16,6 @@ permalink: /news/
           <span class="label label-primary">{{ category }}</span>
         {% endfor %}
       </p>
-      <div>
-        {{ post.excerpt }}
-      </div>
+      {{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">More</a>
     </div>
 {% endfor %}
