@@ -22,9 +22,3 @@ Extension for [Nette](http://nette.org) framework.
 
 #### [PlantUml](http://github.com/unimapper/unimapper-plantuml)
 [PlantUml](http://plantuml.sourceforge.net) schema generator.
-
-## Community
-
---------
-
-> Hey, what are you waiting for, [get involved]({{ site.baseurl }}/docs/extensions/get-involved)!
