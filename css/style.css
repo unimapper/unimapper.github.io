@@ -5,19 +5,43 @@ html, body {
     line-height: 1.42857;
     font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
 }
+h1 {
+    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif";
+}
 a {
     color: #18bc9c;
 }
 a:hover, a:focus, a:active {
     color: #362c57;
-    text-decoration: none;
 }
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: transparent;
-    background: transparent;
+    background-color: #362c57;
+    background-image: radial-gradient(at 50% top , rgba(123, 84, 182, 0.6) 0px, rgba(123, 84, 182, 0) 75%), radial-gradient(at right top , rgba(127, 74, 162, 0.5) 0px, rgba(127, 74, 162, 0) 57%);
+    background-repeat: no-repeat;
+    background-size: 100% 1000px;
     border: none;
+}
+.navbar a {
+    color: #c7c0de;
+}
+.navbar-toggle {
+    background-color: #c7c0de;
+}
+.navbar-toggle .icon-bar {
+    background-color: #362c57;
+}
+.navbar .nav li a:hover {
+    background: none;
+    color: #FFFFFF;
+}
+.navbar .nav li.active a {
+    background-color: #c7c0de;
+    color: #362c57;
+}
+.lead {
+    font-size: 19px;
 }
 .btn-primary {
     background-color: #18bc9c;
@@ -25,7 +49,7 @@ a:hover, a:focus, a:active {
     color: #fff;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    background-color: #362c57;
+    background-color: #2c3e50;
 }
 .btn-flat {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
@@ -40,12 +64,18 @@ a:hover, a:focus, a:active {
 }
 .bg-primary {
     background-color: #18bc9c;
+    color: #D6FFF7;
 }
 .bg-primary a {
-    color: #362c57;
+    color: #045C4C;
+}
+.bg-primary a:hover {
+    color: #00261F;
+}
+.bg-primary h3 {
+    color: #045C4C;
 }
 .jumbotron {
-    font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif";
     background-color: #362c57;
     background-image: radial-gradient(at 50% top , rgba(123, 84, 182, 0.6) 0px, rgba(123, 84, 182, 0) 75%), radial-gradient(at right top , rgba(127, 74, 162, 0.5) 0px, rgba(127, 74, 162, 0) 57%);
     background-repeat: no-repeat;
@@ -78,12 +108,9 @@ a:hover, a:focus, a:active {
 .container-content .nav-pills > li.active > a {
     background-color: #2c3e50;
 }
-.container-content .nav-pills > li.active > a:hover {
-    color: #362c57;
-}
 .container-content .nav-pills > li > a:hover {
-    background-color: #c7c0de;
-    color: #362c57;
+    background-color: #18bc9c;
+    color: #fff;
 }
 .container-content .page-header {
     margin-bottom: 50px;

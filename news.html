@@ -7,7 +7,7 @@ permalink: /news/
 
 {% for post in site.posts %}
     <div>
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h1>{{ post.title }}</h1>
       <p class="lead text-muted">
         {{ post.date | date_to_string }} by <a href="https://github.com/{{ post.author }}">{{ post.author }}</a>
       </p>
