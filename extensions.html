@@ -1,0 +1,29 @@
+---
+layout: default
+title: Extensions
+permalink: /extensions/
+---
+
+{% include navigation.html %}
+
+<div class="jumbotron">
+  <div class="container">
+        <h1>Extensions</h1>
+        <p class="lead">List of known extensions</p>
+  </div>
+</div>
+<div class="container-content container">
+
+    <blockquote>You can share your extensions <a href="https://github.com/unimapper/unimapper.github.io/issues/new">here</a></blockquote>
+
+    <ul>
+    {% for extension in site.data.extensions %}
+      <li>
+        <a href="http://github.com/{{ extension.github }}">
+          {{ extension.title }}
+        </a> {{ extension.description }}
+      </li>
+    {% endfor %}
+    </ul>
+
+</div>

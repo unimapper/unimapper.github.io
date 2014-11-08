@@ -6,6 +6,10 @@
   url: /news
   start_page: /
 
+- title: Extensions
+  url: /extensions
+  start_page: /
+
 - title: Support
   url: /support
   start_page: /
