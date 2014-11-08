@@ -63,6 +63,8 @@ a:hover, a:focus, a:active {
     border-color: transparent;
 }
 .bg-primary {
+    padding-top: 30px;
+    padding-bottom: 40px;
     background-color: #18bc9c;
     color: #D6FFF7;
 }
@@ -145,6 +147,8 @@ a:hover, a:focus, a:active {
     color: #c7c0de;
 }
 .footer {
+    margin-top: 40px;
+    background-color: #c7c0de;
     padding-top: 20px;
     padding-bottom: 15px;
 }

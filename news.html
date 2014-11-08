@@ -7,15 +7,10 @@ permalink: /news/
 
 {% for post in site.posts %}
     <div>
-      <h1>{{ post.title }}</h1>
-      <p class="lead text-muted">
-        {{ post.date | date_to_string }} by <a href="https://github.com/{{ post.author }}">{{ post.author }}</a>
-      </p>
-      <p>
-        {% for category in post.categories %}
-          <span class="label label-primary">{{ category }}</span>
-        {% endfor %}
-      </p>
-      {{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">More</a>
+        <h1>{{ post.title }}</h1>
+        <p class="text-muted">{{ post.date | date_to_string }} by <a href="https://github.com/{{ post.author }}">{{ post.author }}</a></p>
+        <p>{% for category in post.categories %}<span class="label label-default">{{ category }}</span>{% endfor %}</p>
+        <p class="text-justify">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+        <p class="text-right"><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">Read more <i class="fa fa-angle-double-right"></i></a></p>
     </div>
 {% endfor %}
