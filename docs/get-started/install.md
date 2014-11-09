@@ -9,7 +9,7 @@ next_section: /get-started/task
 
 <a href="http://php.net">PHP</a> 5.4+
 
-## Download
+## Composer
 
 The best way to use this library in your project is [Composer](https://getcomposer.org) with all those nice things it provides.
 
@@ -17,4 +17,6 @@ The best way to use this library in your project is [Composer](https://getcompos
 composer require unimapper/unimapper@dev
 ~~~
 
-But you can still download it [manually](http://github.com/unimapper/unimapper/archive/master.zip).
+## Manually
+
+But you can still download it [manually](http://github.com/unimapper/unimapper/archive/master.zip) and load required classes via `./src/loader.php`.
