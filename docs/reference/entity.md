@@ -14,8 +14,7 @@ Entity usually represents a unique object in your application model schema with 
 - **Entity\[\]** Entity [collection](#collection) stored inside the `UniMapper\EntityCollection` class
 
 ## Primary
-This option is very important, because it represents some kind of *foreign key*
-similar to relational database and every entity can be identified by it.
+This option is very important, because it represents some kind of *foreign key* similar to relational database and every entity can be identified by it.
 Usually some `id` column in your database for example.
 It is defined by `m:primary` option.
 
