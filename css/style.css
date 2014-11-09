@@ -32,13 +32,20 @@ a:hover, a:focus, a:active {
 .navbar-toggle .icon-bar {
     background-color: #362c57;
 }
+.navbar .nav li a {
+    border-bottom: 1px solid transparent;
+    margin-left: 40px;
+    padding-left: 0;
+    padding-right: 0;
+}
 .navbar .nav li a:hover {
     background: none;
-    color: #FFFFFF;
+    color: #fff;
+    border-bottom-color:  #c7c0de;
 }
 .navbar .nav li.active a {
-    background-color: #c7c0de;
-    color: #362c57;
+    border-bottom-color: #c7c0de;
+    color: #fff;
 }
 .lead {
     font-size: 19px;
