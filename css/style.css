@@ -109,7 +109,7 @@ a:hover, a:focus, a:active {
 }
 .container-content {
     min-height: 650px;
-    padding: 30px;
+    padding-top: 40px;
 }
 .container-content .nav-stacked {
     padding-top: 40px;
