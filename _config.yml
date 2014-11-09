@@ -1,5 +1,10 @@
 name: UniMapper
+
 markdown: kramdown
+
 kramdown:
-  coderay:
-    coderay_line_numbers: table
+    input: GFM
+    use_coderay: true
+    coderay:
+        coderay_line_numbers: true
+        coderay_css: class
