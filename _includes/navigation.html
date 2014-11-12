@@ -9,12 +9,8 @@
             </button>
             <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="fa fa-home"></i></a>
         </div>
-
         <div id="top-navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                        <gcse:searchbox-only resultsUrl="{{ site.baseurl }}/search" enableAutoComplete="true"></gcse:searchbox-only>
-                </li>
                 {% for link in site.data.navigation %}
                     <li {% if page.url contains link.url %}class="active"{% endif %}>
                         <a href="{{ site.baseurl }}{{ link.url }}{{ link.start_page }}">{{ link.title }}</a>
@@ -23,6 +19,14 @@
                 <li class="divider"></li>
                 <li><a href="{{ site.github.owner_url }}/unimapper" title="View project on Github"><i class="fa fa-github"></i></a></li>
             </ul>
+            <form method="GET" action="{{ site.baseurl }}/search" class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input name="q" type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
