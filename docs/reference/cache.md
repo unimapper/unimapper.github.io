@@ -30,7 +30,7 @@ For example we have a query that should be cached and we want to add some tags a
 
 ~~~php
 $this->query()
-    ->find()
+    ->select()
     ->cached(true, [
         UniMapper\Cache\ICache::TAGS => ["tag1", "tag2"],
         UniMapper\Cache\ICache::EXPIRE => ["20 minutes"]

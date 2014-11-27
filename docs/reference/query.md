@@ -19,14 +19,14 @@ class OrderRepository extends \UniMapper\Repository
     public function findCustom(...)
     {
         $queryBuilder = $this->query();
-        $queryBuilder->find()->...
+        $queryBuilder->select()->...
     }
 }
 ~~~
 
 ## Built-in queries
 
-### find ( `string` property1, `string` property2 .. )
+### select ( `string` property1, `string` property2 .. )
 Get all records as entity collection. You can use the following options:
 
 - limit( `integer` )
@@ -34,7 +34,7 @@ Get all records as entity collection. You can use the following options:
 - [conditions](#Conditions)
 - cached( `boolean`, `array` [options]({{ site.baseurl}}/docs/reference/cache#options) )
 
-### findOne ( `mixed` primaryValue )
+### selectOne ( `mixed` primaryValue )
 Get a single unique record by primary property value.
 
 ### insert ( `array` $data )

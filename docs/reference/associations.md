@@ -57,7 +57,7 @@ class CustomerRepository extends \UniMapper\Entity
 {
     public function findCustomersWithOrders()
     {
-        return $this->find()
+        return $this->select()
             ->associate("orders", ...)
             ->execute();
     }
