@@ -10,16 +10,14 @@ Repository makes data accessing easy in an OOP friendly way. It takes care about
 
 #### count ( `array` $filter )
 
-#### createCollection ( `iterable` $values, `string` $entity )
-
-#### createEntity ( `iterable` $values, `string` $entity )
-
 #### delete ( `UniMapper\Entity` $entity )
 
 #### find ( `array` $filter, `array` $orderBy, `int` $limit, `int` $offset, `array` $associate )
 
 #### findOne ( `mixed` $primary )
 Returns a single entity by its unique primary value.
+
+#### findPrimaries( `array` $primaryValues)
 
 #### insert ( `UniMapper\Entity` $entity )
 Insert data from entity to your storage as a new record. Primary value is ignored but returned.
