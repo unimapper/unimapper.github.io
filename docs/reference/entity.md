@@ -6,17 +6,37 @@ permalink: /docs/reference/entity/
 
 Entity usually represents a unique object in your application model schema with which you are trying to faithfully capture the reality.
 
-## Types
+## Collection
+Keeps entities with same type and can be accessed as [ArrayObject](http://php.net/manual/en/class.arrayobject.php).
+
+## Properties
+
+## Type
 
 - **Basic** `string`, `integer`, `boolean`, `double`, `array`
 - **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
 - **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
 - **Entity\[\]** Entity [collection](#collection) stored inside the `UniMapper\EntityCollection` class
 
-## Primary
-This option is very important, because it represents some kind of *foreign key* similar to relational database and every entity can be identified by it.
+## Adapter
+
+/**
+ * @adapter YourAdapterName(user_table)
+ */
+class User extends \UniMapper\Entity
+{
+
+}
+~~~
+
+## Options
+
+You can pass some additional informations via options. Each option is prefixed with `m:` and consists of key name and values.
+You can choose from some built-in options.
+
+### Primary
+Represents some kind of *foreign key* similar to relational database and every entity can be identified by it.
 Usually some `id` column in your database for example.
-It is defined by `m:primary` option.
 
 ~~~ php
 /**
@@ -26,7 +46,7 @@ class User extends \UniMapper\Entity
 {}
 ~~~
 
-## Mapping
+### Mapping
 You can tell entity how to map your data with `m:map`.
 
 - `name` - Describes alternative column name in database for example.
@@ -34,7 +54,7 @@ You can tell entity how to map your data with `m:map`.
 
 ~~~ php
 /**
- * @property array $list m:map(name='json_data';filter=jsonToArray|arrayToJson)
+ * @property array $list m:map-by(json_data) m:map-filter(jsonToArray|arrayToJson)
  */
 class User extends \UniMapper\Entity
 {
@@ -50,18 +70,7 @@ class User extends \UniMapper\Entity
 }
 ~~~
 
-## Adapter
-
-/**
- * @adapter YourAdapterName(user_table)
- */
-class User extends \UniMapper\Entity
-{
-
-}
-~~~
-
-## Computed
+### Computed
 A kind of virtual property, mostly dependent on other real properties so it is readonly and can not be set directly. It can be helpful in situations like price computing for example.
 
 ~~~ php
@@ -106,8 +115,5 @@ echo $order->price; // Will be 15.0
 
 > Computed property can not be mixed with other options.
 
-## Associations
+### Associations
 See [this article]({{ site.baseurl }}/docs/reference/associations).
-
-## Collection
-Keeps entities with same type and can be accessed as [ArrayObject](http://php.net/manual/en/class.arrayobject.php).

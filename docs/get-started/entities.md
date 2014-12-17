@@ -31,7 +31,7 @@ namespace GetStarted\Model\Entity
  * @property string   $surname
  * @property string   $fullName m:computed
  * @property string   $email
- * @property Order[]  $orders   m:assoc(1:N=customer_id)
+ * @property Order[]  $orders   m:assoc(1:N) m:assoc-by(customer_id)
  */
 class Customer extends \UniMapper\Entity
 {
@@ -54,8 +54,8 @@ namespace GetStarted\Model\Entity;
 /**
  * @adapter Mongo(invoice)
  *
- * @property string  $id     m:primary m:map(name='_id')
- * @property Order[] $orders m:assoc(1:N=invoice_id)
+ * @property string  $id     m:primary m:map-by(_id)
+ * @property Order[] $orders m:assoc(1:N) m:assoc-by(invoice_id)
  */
 class Invoice extends \UniMapper\Entity
 {
@@ -74,10 +74,10 @@ namespace GetStarted\Model\Entity;
  * @adapter Dibi(order)
  *
  * @property integer  $id       m:primary
- * @property Customer $customer m:assoc(N:1=customer_id)
+ * @property Customer $customer m:assoc(N:1) m:assoc-by(customer_id)
  * @property DateTime $time
  * @property string   $status   m:enum(self::STATUS_*)
- * @property Invoice  $invoice  m:assoc(N:1=invoice_id)
+ * @property Invoice  $invoice  m:assoc(N:1) m:assoc-by(invoice_id)
  */
 class Order extends \UniMapper\Entity
 {
