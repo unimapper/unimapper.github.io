@@ -6,6 +6,9 @@ permalink: /docs/reference/associations/
 
 Sometimes you need to describe relation between two entities and this can be done with associations. Every association is represented by an option `m:assoc` with relation type description and its property should be target [entity]({{ site.baseurl}}/docs/reference/entity) or entity [collection]({{ site.baseurl}}/docs/reference/entity#collection), it depends on association type you choose.
 
+## Definition
+Associations are defined as [properties]({{ site.baseurl}}/docs/reference/entity#property) in entity with two required [options]({{ site.baseurl}}/docs/reference/entity#options) - `m:assoc(..)` for the association's type and `m:assoc-by(..)` for association's definition.
+
 ## Supported types
 
 ### 1:N - OneToMany

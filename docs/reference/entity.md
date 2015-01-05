@@ -4,39 +4,54 @@ title: Entity
 permalink: /docs/reference/entity/
 ---
 
-Entity usually represents a unique object in your application model schema with which you are trying to faithfully capture the reality.
+Entity usually represents a unique object in your application model schema with which you are trying to faithfully capture the reality. Every entity must have a common ancestor `UniMapper\Entity` and all custom definitions you write in [PHPDoc](http://en.wikipedia.org/wiki/PHPDoc) comments of every single entity class in you app.
 
 ## Collection
-Keeps entities with same type and can be accessed as [ArrayObject](http://php.net/manual/en/class.arrayobject.php).
+Entities can be grouped in collection that helps you keep its class type and you can access them as simple [ArrayObject](http://php.net/manual/en/class.arrayobject.php).
 
-## Properties
+~~~ php
+$collection = new UniMapper\EntityCollection("Entity");
+$collection[] = new Entity;
 
-## Type
-
-- **Basic** `string`, `integer`, `boolean`, `double`, `array`
-- **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
-- **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
-- **Entity\[\]** Entity [collection](#collection) stored inside the `UniMapper\EntityCollection` class
+foreach ($collection as $entity) {
+    echo $entity->id;
+}
+~~~
 
 ## Adapter
+[Adapters]({{ site.baseurl }}/docs/reference/adapter/) are tied with entity by name you provided during adapter registration on query builder and target resource (eg. table name) as required parameter.
 
+~~~ php
 /**
  * @adapter YourAdapterName(user_table)
  */
 class User extends \UniMapper\Entity
-{
-
-}
+{}
 ~~~
 
-## Options
+## Property
+Properties consist of [access definition](#access-definition), [value type](#value-type) and [options](#options).
 
-You can pass some additional informations via options. Each option is prefixed with `m:` and consists of key name and values.
-You can choose from some built-in options.
+### Access definition
 
-### Primary
-Represents some kind of *foreign key* similar to relational database and every entity can be identified by it.
-Usually some `id` column in your database for example.
+- `@property` you can write and read.
+- `@property-read` readonly access.
+
+### Value type
+
+- **Basic** `string`, `integer`, `boolean`, `double`, `array`
+- **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
+- **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
+- **Entity\[\]** [entity collection](#collection)
+
+### Options
+Options are some additional informations, which can completely change the behavior of property. Each option must be prefixed with `m:` and consists of key name and values splitted by `|`.
+
+
+#### Primary
+Represents some kind of *foreign key* similar to relational database and every entity can be identified by it. Usually some `id` column in your database for example.
+
+> Only one property can be primary but entity can be used without primary.
 
 ~~~ php
 /**
@@ -46,7 +61,7 @@ class User extends \UniMapper\Entity
 {}
 ~~~
 
-### Mapping
+#### Mapping
 You can tell entity how to map your data with `m:map`.
 
 - `name` - Describes alternative column name in database for example.
@@ -70,8 +85,10 @@ class User extends \UniMapper\Entity
 }
 ~~~
 
-### Computed
-A kind of virtual property, mostly dependent on other real properties so it is readonly and can not be set directly. It can be helpful in situations like price computing for example.
+> This option is not required, so if you do not provide it, mapping will use property name as target column automatically. 
+
+#### Computed
+Some kind of virtual property, mostly dependent on other real properties so it is readonly and can not be set directly. It can be helpful in situations like price computing for example.
 
 ~~~ php
 /**
@@ -115,5 +132,5 @@ echo $order->price; // Will be 15.0
 
 > Computed property can not be mixed with other options.
 
-### Associations
-See [this article]({{ site.baseurl }}/docs/reference/associations).
+#### Associations
+For further information about associations follow [this article]({{ site.baseurl }}/docs/reference/associations).

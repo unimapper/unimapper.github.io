@@ -4,24 +4,15 @@ title: Query
 permalink: /docs/reference/query/
 ---
 
-Query gives you a unique way to access your stored data with unite API, wherever they live. It communicates directly with adapters related to entity and the usage itself is very easy with fluent interface.
+Query gives you a unique way to access your stored data with united API, wherever they live. It communicates directly with adapters related to entity and the usage itself is very easy with fluent interface.
 
 ## Query builder
-All queries are usually registered in query builder object that lives in every repository.
-
-**OrderRepository.php**
+Query builder is some kind of factory for all queries and keeps all registered [adapters]({{ site.baseurl }}/docs/reference/adapter/).
 
 ~~~ php
-namespace Model\Repository;
-
-class OrderRepository extends \UniMapper\Repository
-{
-    public function findCustom(...)
-    {
-        $queryBuilder = $this->query();
-        $queryBuilder->select()->...
-    }
-}
+$queryBuilder = new UniMapper\QueryBuilder($mapper, $cache);
+$queryBuilder->registerAdapter("adapterName", new Adapter);
+$queryBuilder->registerAdapter(...);
 ~~~
 
 ## Built-in queries
@@ -93,7 +84,7 @@ class Search extends \UniMapper\Query\Custom
 }
 ~~~
 
-Then you are able to register query on your repository.
+Then you are able to register query in your [repository]({{ site.baseurl }}/docs/reference/repository/).
 
 **OrderRepository.php**
 
