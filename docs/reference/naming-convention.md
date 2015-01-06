@@ -12,8 +12,8 @@ Just define your mask with `*`.
 ~~~ php
 use UniMapper\NamingConventions as UNC;
 
-UNC::$entityMask = "YourApp\Model\Entity\*"; // Default is 'Model\Entity\*'
-UNC::$repositoryMask = "YourApp\Model\Repository\*Repository"; // Default is 'Model\Repository\*Repository'
+UNC::setMask("YourApp\Model\Entity\*", UNC::ENTITY_MASK); // Default is 'Model\Entity\*'
+UNC::setMask("YourApp\Model\Repository\*Repository", UNC::REPOSITORY_MASK); // Default is 'Model\Repository\*Repository'
 ~~~
 
-> These settings must be set before you start the library.
+> All conventions must be set before you start using ORM.

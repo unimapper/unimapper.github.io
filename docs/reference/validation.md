@@ -51,3 +51,4 @@ $entity->getValidator()
 ~~~
 
 ## Usage
+You can set validation rules to every single entity instance by calling `getValidator()` method.

@@ -19,7 +19,7 @@ foreach ($collection as $entity) {
 ~~~
 
 ## Adapter
-[Adapters]({{ site.baseurl }}/docs/reference/adapter/) are tied with entity by name you provided during adapter registration on query builder and target resource (eg. table name) as required parameter.
+[Adapter]({{ site.baseurl }}/docs/reference/adapter/) is tied with entity by name you provided in adapter registration on query builder and target resource (eg. table name) as required parameter.
 
 ~~~ php
 /**
@@ -131,6 +131,3 @@ echo $order->price; // Will be 15.0
 ~~~
 
 > Computed property can not be mixed with other options.
-
-#### Associations
-For further information about associations follow [this article]({{ site.baseurl }}/docs/reference/associations).
