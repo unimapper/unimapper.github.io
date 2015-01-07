@@ -11,5 +11,7 @@ Adapter is the middleman (or middlelady) between the app and the database, REST 
 ## Writing adapters
 You must implement all methods listed in the interface and the contents of these methods should concern itself only retrieving data from a data source, nothing more.
 
+> Don't forget to escape values automatically.
+
 ## Custom mapping
 There may be situations where data that the adapter receives from queries or data source, still need a little intervention during mapping, and therefore each adapter can implement its own mapping descendant.
