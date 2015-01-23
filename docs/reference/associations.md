@@ -50,7 +50,7 @@ By default it's the owning side but if necessary you can change it with `M<N` in
 
 > Using `M>N` is the same as `M:N`.
 
-## Loading associations
+## Getting data
 After you finished entity definition you can decide whether you want to load associated entities automatically during the query or not.
 
 ~~~ php
@@ -62,14 +62,14 @@ class CustomerRepository extends \UniMapper\Entity
     {
         return $this->select()
             ->associate("orders", ...)
-            ->execute();
+            ->run($this->connection());
     }
 }
 ~~~
 
-## Working with associations
+## Changes
 
-Every association can be accessed and modified in entity.
+Changes help you to manage associated entities.
 
 ~~~ php
 $invoice = $invoiceRepo->createEntity();
@@ -79,7 +79,7 @@ $invoiceRepo->save($invoice); // New invoice will be created with relation to or
 ~~~
 
 ### Multi
-If associations's property type is collection (OneToMany or ManyToMany.
+If associations's property type is collection of entities (OneToMany or ManyToMany).
 
 - add ( `UniMapper\Entity` $entity )
 - remove ( `UniMapper\Entity` $entity )
@@ -87,4 +87,4 @@ If associations's property type is collection (OneToMany or ManyToMany.
 - detach ( `UniMapper\Entity` $entity )
 
 ### Single
-If associations's property type is entity (ManyToOne or OneToOne).
+If associations's property type is single entity (ManyToOne or OneToOne).

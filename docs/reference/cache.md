@@ -35,5 +35,5 @@ $this->query()
         UniMapper\Cache\ICache::TAGS => ["tag1", "tag2"],
         UniMapper\Cache\ICache::EXPIRE => ["20 minutes"]
     ])
-    ->execute();
+    ->run($this->connection());
 ~~~
