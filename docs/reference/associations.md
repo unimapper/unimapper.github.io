@@ -46,12 +46,12 @@ You can even associate entities with cross-adapter relationship and the ORM take
 If your are using [M:N](#mn---manytomany) relationship as [remote](#remote-associations) association you may need to declare on which side join table is.
 By default it's the owning side but if necessary you can change it with `M<N` in definition.
 
-`@property Departments[] $departments m:assoc(M<N=employeeId|employee_department|departmentId)`.
+`@property Departments[] $departments m:assoc(M<N=employeeId|employee_department|departmentId)`
 
 > Using `M>N` is the same as `M:N`.
 
 ## Getting data
-After you finished entity definition you can decide whether you want to load associated entities automatically during the query or not.
+After you finished entity definition you can decide whether you want to join associated entities automatically during the [query]({{ site.baseurl }}/docs/reference/query) or not.
 
 ~~~ php
 namespace MyApp\Model\Repository;
@@ -67,24 +67,40 @@ class CustomerRepository extends \UniMapper\Entity
 }
 ~~~
 
-## Changes
+## Filters
+Filters allow you to modify associated result without any complications. Every filter must be registered globally on entity reflection and defined in property docblock as another option.
 
-Changes help you to manage associated entities.
-
+**Registration**
 ~~~ php
-$invoice = $invoiceRepo->createEntity();
-$invoice->orders()->attach($orderRepo->findOne(1));
-
-$invoiceRepo->save($invoice); // New invoice will be created with relation to order with id 1
+UniMapper\Reflection\Property::registerAssocFilter("sortLimit", function (UniMapper\Association\Multi $assoc, $orderBy = "ASC", $limit = 10) {
+    $assoc->limit($limit)->orderBy($orderBy);
+});
 ~~~
 
-### Multi
-If associations's property type is collection of entities (OneToMany or ManyToMany).
+**Usage**
+`@property Orders[] $orders m:assoc(M:N=userId|user_order|orderId) m:assoc-filter-sortLimit(DESC|10)`
 
-- add ( `UniMapper\Entity` $entity )
-- remove ( `UniMapper\Entity` $entity )
-- attach ( `UniMapper\Entity` $entity )
-- detach ( `UniMapper\Entity` $entity )
+> Only one filter option can be defined on every property
+
+## Changes
+Help you to manage entity or collection changes directly on property. Usage is slightly different depending on property [type]({{ site.baseurl }}/docs/reference/entity#value-type), but you can use common methods `attach`, `detach`, `remove` or `add` with both types.
+
+### Multi
+If property type is collection of entities, typically ([OneToMany](#n---onetomany) or [ManyToMany](#mn---manytomany)).
+
+~~~ php
+$user = $repository->findOne(1);
+$user->orders()->attach(new Order["id" => 2]); // Order with id 2 is attached to user with id 1 so only one new record in join table will be added after save
+$repository->save($user);
+~~~
 
 ### Single
-If associations's property type is single entity (ManyToOne or OneToOne).
+If property type is a single entity, typically ([ManyToOne](#n1---manytoone) or [OneToOne](#onetoone)).
+
+~~~ php
+$order = $repository->findOne(1);
+$order->invoice(new Invoice)->add(); // New invoice will be created with relation to order with id 1 after save
+$repository->save($order);
+~~~
+
+> Changes on property can be cleaned with FALSE argument - `$entity->property(false)`.

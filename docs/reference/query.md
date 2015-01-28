@@ -30,18 +30,21 @@ $connection->registerAdapter(...);
 Entity::query()->select()->run($connection);
 ~~~
 
-## Standard queries
+## Default queries
 
 ### select ( `string` property1, `string` property2 .. )
 Get all records as entity collection. You can use the following options:
 
-- limit( `integer` )
-- offset( `integer` )
-- [conditions](#conditionable)
+- [selectable](#selectable)
+- [limit](#limit)
+- [conditionable](#conditionable)
+- [sortable](#sortable)
 - cached( `boolean`, `array` [options]({{ site.baseurl}}/docs/reference/cache#options) )
 
 ### selectOne ( `mixed` primaryValue )
 Get a single unique record by primary value.
+
+- [selectable](#selectable)
 
 ### insert ( `array` $data )
 Insert a new record
@@ -49,7 +52,7 @@ Insert a new record
 ### update ( `array` $data )
 Update record.
 
-- [conditions](#conditionable)
+- [conditionable](#conditionable)
 
 ### updateOne ( `mixed` primaryValue )
 Update record by primary value.
@@ -57,26 +60,13 @@ Update record by primary value.
 ### delete ()
 Delete record.
 
-- [conditions](#conditionable)
+- [conditionable](#conditionable)
 
 ### deleteOne ( `mixed` primaryValue )
 Delete record by primary value.
 
-### Conditionable queries
-Conditionable queries can use following methods:
-
-- where()
-- orWhere()
-- whereAre()
-- orwhereAre()
-
-> Be aware of operator operator precedence, depending on your current [adapter]({{ site.baseurl }}/docs/reference/adapter/).
-
 ## Custom queries
-
-You can even create and register your own query. This can be useful in situations
-such as when you need optimized query to the database and you know that it will be
-used in the same form several times in your code.
+You can even create and register your own query. This can be useful in situations such as when you need optimized query to the database and you know that it will be used in the same form several times in your code.
 
 ### Definition
 First of all, you need to create custom query class.
@@ -109,3 +99,42 @@ UniMapper\QueryBuilder::registerQuery("MyApp\Model\Query\Search");
 ~~~
 
 > Method name of custom query is generated from class base name, but you can change it manually by overloading method *UniMapper\Query::getName()*, but remember that resulted query name must be unique and should not collidate with [standard queries](#standard-queries).
+
+## Common methods
+Provides common methods as [Trait](http://php.net/manual/en/language.oop5.traits.php).
+
+### Conditionable
+
+~~~ php
+$query->where("propertyName", "=", 1);
+$query->orWhere("propertyName", "=", 1);
+~~~
+
+> Be aware of operator operator precedence (OR, AND), depending on your current [adapter]({{ site.baseurl }}/docs/reference/adapter/).
+
+#### Nested conditions
+
+~~~ php
+$query->whereAre(function(UniMapper\Query $query) {
+    $query->where(...);
+});
+
+$query->orWhereAre(....);
+~~~
+
+#### Operators
+
+
+### Selectable
+
+- select( `string`, `array`, ... )
+- associate ( 'string', `array`, ... )
+
+### Sortable
+
+- orderBy( `string` $name, `string` $direction  = self::ASC )
+
+### Limit
+
+- limit( `int` )
+- offset( `int` )
