@@ -1,9 +1,4 @@
 name: UniMapper
 
-markdown: kramdown
-
-kramdown:
-    input: GFM
-
 gems:
   - jekyll-sitemap
