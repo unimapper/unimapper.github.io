@@ -2,3 +2,9 @@ name: UniMapper
 
 gems:
   - jekyll-sitemap
+
+#highlighter: pygments
+
+markdown: kramdown
+kramdown:
+  use_coderay: false

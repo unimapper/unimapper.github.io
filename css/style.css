@@ -131,18 +131,6 @@ a:hover, a:focus, a:active {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.container-content code {
-    color: #004E91;
-    background-color: #E8E8E8;
-}
-.container-content pre {
-    background-color: #2c3e50;
-    margin-bottom: 50px;
-}
-.container-content pre code {
-    background-color: #2c3e50;
-    color: #fff;
-}
 .container-content blockquote {
     font-size: 14px;
     border-left: none;
