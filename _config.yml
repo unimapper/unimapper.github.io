@@ -2,9 +2,3 @@ name: UniMapper
 
 gems:
   - jekyll-sitemap
-
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
