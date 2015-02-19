@@ -10,12 +10,12 @@ Validation syntax can be very simple or much advanced with very clear writing wi
 ## Rules
 
 ### Entity
-~~~ php
+```php
 $entity->getValidator()
     ->addRule(function(\UniMapper\Entity $entity) {
         return $entity->text === "foo";
     }, "Text must be foo!");
-~~~
+```
 
 ### Property
 ~~~ php
