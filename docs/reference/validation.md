@@ -50,5 +50,7 @@ $entity->getValidator()
         ->endCondition()
 ~~~
 
+> Using `->on(...)` is not allowed inside the condition block!
+
 ## Usage
 You can set validation rules to every single entity instance by calling `getValidator()` method.
