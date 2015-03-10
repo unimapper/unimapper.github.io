@@ -14,7 +14,7 @@ next_section: /get-started/task
 The best way to use this library in your project is [Composer](https://getcomposer.org) with all those nice things it provides.
 
 ~~~ shell
-composer require unimapper/unimapper@dev
+composer require unimapper/unimapper=~1.0.0
 ~~~
 
 ## Manually
