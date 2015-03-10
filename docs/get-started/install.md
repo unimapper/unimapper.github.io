@@ -19,4 +19,4 @@ composer require unimapper/unimapper=~1.0.0
 
 ## Manually
 
-But you can still download it [manually](http://github.com/unimapper/unimapper/archive/master.zip) and load required classes via `./src/loader.php`.
+But you can still download it [manually](http://github.com/unimapper/unimapper/releases/tag/v1.0.0) and load required classes via `./src/loader.php`.
