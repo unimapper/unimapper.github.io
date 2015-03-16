@@ -73,7 +73,7 @@ Groups are similar to parentheses in SQL and they are defined by a numeric array
 
 ~~~ php
 [
-	["time" => [">" => new DateTime]]
+	["time" => [">" => new DateTime]],
 	["time" => ["<" => new DateTime('+ 1 day')]
 ]
 // WHERE (time > '...') AND (time < '...')
@@ -88,7 +88,7 @@ In the most cases you need to use OR modifier with these groups.
 ~~~ php
 [
 	"or" => [
-		["time" => [">" => new DateTime]]
+		["time" => [">" => new DateTime]],
 		["time" => [">" => new DateTime('+ 1 day')]
 	]
 ]
@@ -102,7 +102,7 @@ Your filter can be even more complicated with AND,OR combinations.
 	["id" => [">" = 1]],
 	[
 		"or" => [
-			["time" => [">" => new DateTime]]
+			["time" => [">" => new DateTime]],
 			["time" => [">" => new DateTime('+ 1 day')]
 		]
 	]
