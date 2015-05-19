@@ -43,6 +43,11 @@ Properties consist of [access definition](#access-definition), [value type](#val
 - **[DateTime](http://www.php.net/manual/en/class.datetime.php)**
 - **Entity** Single entity, named according to your [naming conventions]({{ site.baseurl }}/docs/reference/naming-conventions/)
 - **Entity\[\]** [entity collection](#collection)
+- **Date** accepts [DateTime](http://www.php.net/manual/en/class.datetime.php) object but date format given after entity serialization. Output format can be changed like via
+
+~~~ php
+UniMapper\Entity::$dateFormat = "Y-m-d";
+~~~
 
 ### Options
 Options are some additional informations, which can completely change the behavior of property. Each option must be prefixed with `m:` and consists of key name and values splitted by `|`.
