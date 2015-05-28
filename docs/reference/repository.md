@@ -17,6 +17,9 @@ Creates data from entity in your storage as a new record. Primary value is ignor
 ### destroy ( `UniMapper\Entity` $entity ) : `bool`
 Deletes data related to an entity that you passed in as an argument.
 
+### destroyBy ( `array` [$filter](#filtering-data) ) : `int`
+Delete data defined by given filter and returns number of affected records.
+
 ### find ( `array` [$filter](#filtering-data), `array` $orderBy, `int` $limit, `int` $offset, `array` $associate ) : `UniMapper\EntityCollection`
 Finds all data and returns it as the [entity collection]({{ site.baseurl }}/docs/reference/entity#collection).
 
@@ -31,6 +34,9 @@ Persists given entity. If primary value set on entity it calls insert, if not th
 
 ### update ( `UniMapper\Entity` $entity )
 Updates data from entity in your storage.
+
+### updateBy ( `UniMapper\Entity` $entity, `array` [$filter](#filtering-data) ) : `int`
+Update data defined by given filter and returns number of affected records.
 
 ## Filtering data
 You can optionally pass an array with filter specifying the criteria under which the data are filtered in some repository methods. The syntax is similar to MongoDB criteria, but it's slightly different and much easier.
