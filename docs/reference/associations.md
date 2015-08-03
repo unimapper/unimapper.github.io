@@ -71,6 +71,7 @@ class CustomerRepository extends \UniMapper\Entity
 Filters allow you to modify associated result without any complications. Every filter must be registered globally on entity reflection and defined in property docblock as another option.
 
 **Registration**
+
 ~~~ php
 UniMapper\Reflection\Property::registerAssocFilter("sortLimit", function (UniMapper\Association\Multi $assoc, $orderBy = "ASC", $limit = 10) {
     $assoc->limit($limit)->orderBy($orderBy);
