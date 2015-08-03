@@ -79,6 +79,7 @@ UniMapper\Reflection\Property::registerAssocFilter("sortLimit", function (UniMap
 ~~~
 
 **Usage**
+
 `@property Orders[] $orders m:assoc(M:N=userId|user_order|orderId) m:assoc-filter-sortLimit(DESC|10)`
 
 > Only one filter option can be defined on every property
