@@ -11,11 +11,18 @@
         </div>
         <div id="top-navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                {% for link in site.data.navigation %}
-                    <li {% if page.url contains link.url %}class="active"{% endif %}>
-                        <a href="{{ site.baseurl }}{{ link.url }}{{ link.start_page }}">{{ link.title }}</a>
-                    </li>
-                {% endfor %}
+                <li>
+                    <a href="http://unimapper.readthedocs.org">Documentation</a>
+                </li>
+                <li{% if page.url contains 'news' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}/news">News</a>
+                </li>
+                <li{% if page.url contains 'extensions' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}/extensions">Extensions</a>
+                </li>
+                <li{% if page.url contains 'support' %} class="active"{% endif %}>
+                <a href="{{ site.baseurl }}/support">Support</a>
+                </li>
                 <li class="divider"></li>
                 <li><a href="{{ site.github.owner_url }}/unimapper" title="View project on Github"><i class="fa fa-github"></i></a></li>
             </ul>
